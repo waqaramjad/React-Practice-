@@ -13,11 +13,17 @@ this.state = {
         Meanstack:false,
         Mernstack: false,
         Lampstack:false
+    },
+    checkGroup  : {
+        Meanstack:false,
+        Mernstack: false,
+        Lampstack:false
     }
 }
 this.ChangeValue = this.ChangeValue.bind(this)
 this.ArrayHandler = this.ArrayHandler.bind(this)
 this.radioHandler = this.radioHandler.bind(this)
+this.checkhandler = this.checkhandler.bind(this)
 }
 
 ChangeValue(ev)
@@ -43,7 +49,15 @@ this.setState({
 })
 console.log(this.state.userList)
 }
-
+checkhandler(ev)
+{
+    let checkbox = this.state.checkGroup;
+    checkbox[ev.target.value] =  ev.target.checked;
+    console.log(ev.target.value)
+this.setState({
+    checkGroup :  checkbox
+})
+}
 radioHandler(ev)
 {
 // console.log(ev.target.value)
@@ -65,6 +79,7 @@ radioGroup: radioGroup1
 
 }
 
+
 render()
 {
 
@@ -81,6 +96,13 @@ render()
                 Mean Stack <input type="radio" name="devCateg" value="Meanstack" checked={this.state.radioGroup['Meanstack']} onChange={this.radioHandler}/> </label>
                 <label>   Mern Stack <input type="radio" name="devCateg" value="Mernstack" checked={this.state.radioGroup['Mernstack']} onChange={this.radioHandler}/> </label>
                 <label>  lamp Stack <input type="radio" name="devCateg" value="Lampstack" checked={this.state.radioGroup['Lampstack']} onChange={this.radioHandler}/>
+            </label>
+
+            <h4>check box </h4>
+            <label>
+                Mean Stack <input type="checkbox" name="developers" value="Meanstack" checked={this.state.checkGroup['Meanstack']} onChange={this.checkhandler}/> </label>
+                <label>   Mern Stack <input type="checkbox" name="developers" value="Mernstack" checked={this.state.checkGroup['Mernstack']} onChange={this.checkhandler}/> </label>
+                <label>  lamp Stack <input type="checkbox" name="developers" value="Lampstack" checked={this.state.checkGroup['Lampstack']} onChange={this.checkhandler}/>
             </label>
         </div>
     )
