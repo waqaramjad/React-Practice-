@@ -18,17 +18,32 @@ this.state = {
         Meanstack:false,
         Mernstack: false,
         Lampstack:false
-    }
+    }, 
+    select :'c'
+
 }
 this.ChangeValue = this.ChangeValue.bind(this)
 this.ArrayHandler = this.ArrayHandler.bind(this)
 this.radioHandler = this.radioHandler.bind(this)
 this.checkhandler = this.checkhandler.bind(this)
+this.selecthandler = this.selecthandler.bind(this)
 }
+selecthandler(ev)
+{
+    console.log(ev.target.value)
+    this.setState({
+        select : ev.target.value
+    })
+   
+    this.wiki();
 
+}
+wiki()
+{
+    console.log(this.state.select, 'select')
+}
 ChangeValue(ev)
 {
-// console.log(ev.target.value)
 // console.log(this)
 this.setState ({
     userInput : ev.target.value,
@@ -104,7 +119,22 @@ render()
                 <label>   Mern Stack <input type="checkbox" name="developers" value="Mernstack" checked={this.state.checkGroup['Mernstack']} onChange={this.checkhandler}/> </label>
                 <label>  lamp Stack <input type="checkbox" name="developers" value="Lampstack" checked={this.state.checkGroup['Lampstack']} onChange={this.checkhandler}/>
             </label>
+        
+        <br/>
+        <h4>drop down menue  </h4>
+
+        <select name='developeroption' onChange={this.selecthandler} value={this.state.select}>
+            <option  value='Ruby' >Ruby</option>
+            <option  value='python'>python</option>
+            <option  value='c'>c</option>
+
+
+        </select>
+        {/* <h4>    </h4> */}
+        
         </div>
+
+
     )
 }
 
