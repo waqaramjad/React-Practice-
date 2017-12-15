@@ -27,6 +27,11 @@ this.ArrayHandler = this.ArrayHandler.bind(this)
 this.radioHandler = this.radioHandler.bind(this)
 this.checkhandler = this.checkhandler.bind(this)
 this.selecthandler = this.selecthandler.bind(this)
+this.emailhandler = this.emailhandler.bind(this)
+}
+emailhandler(ev)
+{
+console.log(this.refs.subscribemail.value)
 }
 selecthandler(ev)
 {
@@ -127,9 +132,14 @@ render()
             <option  value='Ruby' >Ruby</option>
             <option  value='python'>python</option>
             <option  value='c'>c</option>
-
-
         </select>
+
+        <label>
+<input type='email' ref='subscribemail'/>
+<button onClick={this.emailhandler}> Send mail </button>
+
+
+        </label>
         {/* <h4>    </h4> */}
         
         </div>
