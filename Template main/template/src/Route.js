@@ -3,26 +3,29 @@ import App from './App';
 import About from './about';
 import Docs from './Docs';
 import Navbar from './Navbar'
+import createBrowserHistory from 'history/createBrowserHistory'
+
 
 import {
-
-    BrowserRouter as Router,
+    
+     Router,
     Route,
     Link
 } from 'react-router-dom'
 
+const customhistory = createBrowserHistory()
 const Func = () =>(
-<Router>
+// console.log(customhistory)
 
+<Router history={customhistory}>
     <div>
     <Navbar/>
         
+        
         <hr/>
-        <hr/>
-        <hr/>
-        <Route exact path='/About' component={App}/>
-        <Route exact path='/Docs' component={About}/>
-        <Route exact path='/' component={Docs}/>
+        <Route exact path='/' component={App}/>
+        <Route exact path='/About' component={About}/>
+        <Route exact path='/Docs' component={Docs}/>
         
     </div>
 </Router>
