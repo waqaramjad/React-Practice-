@@ -25,7 +25,7 @@ const Func = () =>(
         <hr/>
         <Route exact path='/' component={App}/>
         <Route exact path='/About' component={About}/>
-        <Route exact path='/Docs' component={Docs}/>
+        <Route exact path='/Docs/:rollno' component={Docs}/>
         
     </div>
 </Router>

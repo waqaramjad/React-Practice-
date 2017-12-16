@@ -12,8 +12,8 @@ class Docs extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Docs my className is BSSE </h1>
-
+        <h1>Docs main </h1>
+        <h1>{this.props.match.params.rollno}</h1>
         <button onClick={this.Docs.bind(this)}>Go to Docs  </button>
 
 

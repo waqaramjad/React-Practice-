@@ -11,7 +11,7 @@ this.props.history.push('/');
 
  Docs()
  {
-this.props.history.push('/Docs');
+this.props.history.push('/Docs/WAQAR Amjad Ali Jutt Jadran');
  }
  
   render() {
