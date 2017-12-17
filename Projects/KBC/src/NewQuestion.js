@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import * as firebse from './firebase';
 
 class NewQuestion extends Component
 {
@@ -17,7 +18,8 @@ constructor(props)
                 option2 : '',
                 option3 : '',
                 option4 : ''
-        }
+        },
+        name :25
     }
     this.question = this.question.bind(this)
     // this.option1 =this.option4.bind(this)
@@ -25,6 +27,12 @@ constructor(props)
     // this.option3 =this.option2.bind(this)
     // this.option4 =this.option1.bind(this)
 
+}
+
+ComponentDidMount(){
+this.setState({
+    
+})
 }
 question(ev){
 
