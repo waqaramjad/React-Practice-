@@ -125,7 +125,8 @@ render()
                 <label>  lamp Stack <input type="checkbox" name="developers" value="Lampstack" checked={this.state.checkGroup['Lampstack']} onChange={this.checkhandler}/>
             </label>
         
-        <br/>
+        <br/>y
+        
         <h4>drop down menue  </h4>
 
         <select name='developeroption' onChange={this.selecthandler} value={this.state.select}>
