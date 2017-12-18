@@ -1,6 +1,18 @@
 import React, { Component } from 'react';
-// import * as firebse from 'firebase';
-import firebase1 from './firebase.js';
+// import * as firebase from 'firebase';
+// import firebase1 from './firebase.js';
+import * as firebase from 'firebase';
+var  fb = firebase.initializeApp({
+    apiKey: "AIzaSyBBucSYR_-jHd_GY1WVnrtmTw4FtI5KM90",
+    authDomain: "projects-d01b3.firebaseapp.com",
+    databaseURL: "https://projects-d01b3.firebaseio.com",
+    projectId: "projects-d01b3",
+    storageBucket: "projects-d01b3.appspot.com",
+    messagingSenderId: "894816354920"
+
+
+});
+
 class NewQuestion extends Component
 {
 
@@ -28,16 +40,16 @@ constructor(props)
     // this.option4 =this.option1.bind(this)
 
 }
-
-ComponentDidMount(){
-    // const rootRef = firebase.database().ref().child('react');
-    // const speedref  =  rootRef.child('name');
-    // speedref.on('value',snap => {
-
-    //     this.setState({
-    //     name : snap.val()
-    //     })
-    // });
+componentDidMount(){
+    const rootRef = fb.database().ref().child('react');
+    const speedref  =  rootRef.child('name');
+    speedref.on('value',(snap) => {
+        let newData = snap.val();
+        // console.log(snap.val())
+        this.setState({
+        name : snap.val()   
+        })
+    });
 }
 question(ev){
 
