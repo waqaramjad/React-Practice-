@@ -1,0 +1,21 @@
+[debug] [2017-12-17T16:21:45.052Z] ----------------------------------------------------------------------
+[debug] [2017-12-17T16:21:45.060Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hp2\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase init
+[debug] [2017-12-17T16:21:45.060Z] CLI Version:   3.16.0
+[debug] [2017-12-17T16:21:45.060Z] Platform:      win32
+[debug] [2017-12-17T16:21:45.060Z] Node Version:  v7.4.0
+[debug] [2017-12-17T16:21:45.076Z] Time:          Sun Dec 17 2017 21:21:45 GMT+0500 (Pakistan Standard Time)
+[debug] [2017-12-17T16:21:45.076Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-12-17T16:21:45.184Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] [2017-12-17T16:21:45.184Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  W:\Drive\SAYLANI\react\React state\Practice of state and other
+

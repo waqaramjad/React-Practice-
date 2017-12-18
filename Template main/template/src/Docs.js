@@ -14,7 +14,7 @@ import {
 class Docs extends Component {
  
   constructor(props)  {
-super(props);
+super(props); 
 
  
     

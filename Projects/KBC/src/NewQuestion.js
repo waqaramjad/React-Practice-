@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import * as firebse from './firebase';
-
+// import * as firebse from 'firebase';
+import firebase1 from './firebase.js';
 class NewQuestion extends Component
 {
 
@@ -30,9 +30,14 @@ constructor(props)
 }
 
 ComponentDidMount(){
-this.setState({
-    
-})
+    // const rootRef = firebase.database().ref().child('react');
+    // const speedref  =  rootRef.child('name');
+    // speedref.on('value',snap => {
+
+    //     this.setState({
+    //     name : snap.val()
+    //     })
+    // });
 }
 question(ev){
 
@@ -59,7 +64,7 @@ render(){
     <label>c<input  name='radioGroup'type='radio' /><input type='text'onChange={this.question} name='option3' /></label><br/>
     <label>d<input  name='radioGroup'type='radio' /><input type='text'onChange={this.question} name='option4' /></label><br/>
     <button onClick={this.submitQuestion}>Submit</button>
-
+<h1>{this.state.name}</h1>
     </form>
     
 </div>
