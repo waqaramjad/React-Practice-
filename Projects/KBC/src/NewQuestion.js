@@ -80,7 +80,7 @@ render(){
 <div>
     {/* <form > */}
     <label>Enter Question<input type='text' onChange={this.question} name='question'/></label><br/>
-    <label>a<input name='radioGroup'  type='radio' /><input type='text'  name='option1'  onChange={this.question}/></label><br/>
+    <label>a<input name='radioGroup'  type='radio' /><input type='text'  value={this.state.formInput['option1']} name='option1'  onChange={this.question}/></label><br/>
     <label>b<input name='radioGroup' type='radio' /><input type='text'onChange={this.question} name='option2' /></label><br/>
     <label>c<input  name='radioGroup'type='radio' /><input type='text'onChange={this.question} name='option3' /></label><br/>
     <label>d<input  name='radioGroup'type='radio' /><input type='text'onChange={this.question} name='option4' /></label><br/>
