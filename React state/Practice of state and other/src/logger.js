@@ -1,6 +1,5 @@
-
 import React, { Component } from 'react';
-// import Clock from './App'
+import Clock from './App'
 
 
 
@@ -60,12 +59,31 @@ componentWillUnmount()
     console.log('componentWillUnmount()');
 }
 
+hello(){
+    return(
+        <div>
+
+            <h1>wiki is ma ha  </h1>
+            <h1>wiki is ma ha  </h1>
+            <h1>wiki is ma ha  </h1>
+
+        </div>
+        // console.log('wikki hello')
+        
+    )
+}
+
     render()
     {
         console.log('render')
         
         return(
-            <h1>{this.props.time}</h1>
+            <div>
+            {this.hello()}
+
+                <h1>{this.props.time}</h1>
+                <h1>Hello World </h1>
+            </div>
         )
     }
 }
